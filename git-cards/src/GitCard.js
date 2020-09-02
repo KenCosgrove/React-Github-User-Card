@@ -77,14 +77,13 @@ class GitCard extends React.Component {
                   <h3>{user.login}</h3>
                   <p>Followers: {user.followers}</p>
                   <p>Following: {user.following}</p>
+                  {this.state.followers.map(item => (
+                  <p className="followers">{item.login}</p>
+                ))} 
                 </div>
                 ))} 
                 
-                 {this.state.followers.map(item => (
-                    
-                  <p className="followers">{item.login}</p>
-                  
-                ))} 
+               
             </div>    
         </div>
           
